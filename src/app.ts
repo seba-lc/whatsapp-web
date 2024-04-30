@@ -1,7 +1,7 @@
 import { createBot, createProvider, MemoryDB, createFlow, addKeyword } from '@bot-whatsapp/bot';
 import { BaileysProvider, handleCtx } from '@bot-whatsapp/provider-baileys';
 
-const flowBienvenida = addKeyword('hola').addAnswer('Bienvenido a Marketar :)')
+const flowBienvenida = addKeyword('Server ru up?').addAnswer('Yes sr I am');
 
 const main = async () => {
 
@@ -27,3 +27,6 @@ const main = async () => {
 }
 
 main();
+
+//https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzltMjZsM3o4d2Y3Y2h6d2g1cGt2Ymxkcm10aHl1dWl2YnJoMWR5dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/dYZuqJLDVsWMLWyIxJ/giphy.mp4
+//tiene que tener la terminacion mp4 dont know why
