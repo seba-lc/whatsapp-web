@@ -1,7 +1,7 @@
 import { createBot, createProvider, MemoryDB, createFlow, addKeyword } from '@bot-whatsapp/bot';
 import { BaileysProvider, handleCtx } from '@bot-whatsapp/provider-baileys';
 
-const flowBienvenida = addKeyword('Server ru up?').addAnswer('Yes sr I am :|');
+const flowBienvenida = addKeyword('Server ru up?').addAnswer('Yes sr I am.');
 
 const main = async () => {
 
