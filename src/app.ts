@@ -1,7 +1,7 @@
 import { createBot, createProvider, MemoryDB, createFlow, addKeyword } from '@bot-whatsapp/bot';
 import { BaileysProvider, handleCtx } from '@bot-whatsapp/provider-baileys';
 
-const flowBienvenida = addKeyword('Server ru up?').addAnswer('Yes sr I am');
+const flowBienvenida = addKeyword('Server ru up?').addAnswer('Yes sr I am :|');
 
 const main = async () => {
 
@@ -40,7 +40,13 @@ node src/index.js |||  pm2 start src/index.js
 para cerrar todas las aplicaciones que esten corriendo:
 pm2 delete all
 
+para correr la app desde el archivo de configuracion del ecosistema:
+pm2 start ecosystem.config.js
 
+pm2 logs; nos dice las aplicaciones que estan corriendo y en que puerto lo hacen
+
+pm2 plus:
+https://app.pm2.io/bucket/66329d5938642d83f413a2b8/backend/overview/servers
 
 */
 

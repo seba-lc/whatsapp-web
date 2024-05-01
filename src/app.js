@@ -11,7 +11,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 const bot_1 = require("@bot-whatsapp/bot");
 const provider_baileys_1 = require("@bot-whatsapp/provider-baileys");
-const flowBienvenida = (0, bot_1.addKeyword)('Server ru up?').addAnswer('Yes sr I am');
+const flowBienvenida = (0, bot_1.addKeyword)('Server ru up?').addAnswer('Yes sr I am :|');
 const main = () => __awaiter(void 0, void 0, void 0, function* () {
     var _a;
     const provider = (0, bot_1.createProvider)(provider_baileys_1.BaileysProvider);
@@ -43,6 +43,12 @@ node src/index.js |||  pm2 start src/index.js
 para cerrar todas las aplicaciones que esten corriendo:
 pm2 delete all
 
+para correr la app desde el archivo de configuracion del ecosistema:
+pm2 start ecosystem.config.js
 
+pm2 logs; nos dice las aplicaciones que estan corriendo y en que puerto lo hacen
+
+pm2 plus:
+https://app.pm2.io/bucket/66329d5938642d83f413a2b8/backend/overview/servers
 
 */
