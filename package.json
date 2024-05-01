@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "init": "tsc --init",
     "compile": "tsc",
-    "start": "npm run compile && pm2 start ./src/app.js"
+    "start": "npm run compile && pm2 start ecosystem.config.js"
   },
   "author": "",
   "license": "ISC",

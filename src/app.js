@@ -11,7 +11,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 const bot_1 = require("@bot-whatsapp/bot");
 const provider_baileys_1 = require("@bot-whatsapp/provider-baileys");
-const flowBienvenida = (0, bot_1.addKeyword)('Server ru up?').addAnswer('Yes sr I am :|');
+const flowBienvenida = (0, bot_1.addKeyword)('Server ru up?').addAnswer('Yes sr I am.');
 const main = () => __awaiter(void 0, void 0, void 0, function* () {
     var _a;
     const provider = (0, bot_1.createProvider)(provider_baileys_1.BaileysProvider);
