@@ -1,7 +1,12 @@
 import { createBot, createProvider, MemoryDB, createFlow, addKeyword } from '@bot-whatsapp/bot';
 import { BaileysProvider, handleCtx } from '@bot-whatsapp/provider-baileys';
+import { EVENTS } from '@bot-whatsapp/bot';
 
-const flowBienvenida = addKeyword('Server ru up?').addAnswer('Yes sr I am.');
+const flowServerUp = addKeyword('Server ru up?').addAnswer('Yes sr I am.');
+// const flowBienvenida = addKeyword(EVENTS.WELCOME)
+//   .addAnswer('Hola! Con qué podemos ayudarte? En la brevedad uno de nuestros administradores se pondrá en contacto contigo :)');
+// const flowCash = addKeyword(['1', 'efectivo']).addAnswer('Perfecto! Te mantendremos informado sobre el estado del pedido :)');
+// const flowCard = addKeyword(['2', 'transferencia']).addAnswer(`Perfecto! Nuestro alias es: kuranda.mp \nTe pedimos el comprobante una vez realizado el pago, y te mantendremos informado sobre el estado del pedido :)`);
 
 const main = async () => {
 
@@ -19,11 +24,11 @@ const main = async () => {
     res.end('esto es del server de polka')
   }));
 
-  await createBot({
-    flow: createFlow([flowBienvenida]),
-    database: new MemoryDB(),
-    provider
-  })
+  // await createBot({
+  //   flow: createFlow([flowBienvenida, flowCash, flowCard]),
+  //   database: new MemoryDB(),
+  //   provider
+  // })
 }
 
 main();
