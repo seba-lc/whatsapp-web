@@ -5,7 +5,7 @@ const main = async () => {
 
   const provider = createProvider(BaileysProvider);
 
-  provider.initHttpServer(3005);
+  provider.initHttpServer(3010);
 
   provider.http?.server.post('/send-message', handleCtx(async (bot, req, res) => {
     const phone = req.body.phone;
