@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: "whatsapp-api",
+      name: "business-whatsapp-api",
       script: "./src/app.js",
       watch: false, //sirve que para si por algun motivo el repositorio fue actualizado en el servidor, el restart de la aplicacion para que tome los cambios sea manual.
       max_memory_restart: '1000M', //cuando la app supere 1Gb de memoria, la app se reinicia. Pero lo que no se es si se limpia el script de alguna forma (?)
