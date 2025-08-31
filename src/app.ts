@@ -3,9 +3,11 @@ import { BaileysProvider, handleCtx } from '@bot-whatsapp/provider-baileys';
 
 const main = async () => {
 
-  const provider = createProvider(BaileysProvider);
+  const provider = createProvider(BaileysProvider, {
+    name: 'sessionBot_kurandaBusiness'
+  });
 
-  provider.initHttpServer(3010);
+  provider.initHttpServer(3015);
 
   provider.http?.server.post('/send-message', handleCtx(async (bot, req, res) => {
     const phone = req.body.phone;
