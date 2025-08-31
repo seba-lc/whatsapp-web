@@ -5,9 +5,7 @@ const flowBienvenida = addKeyword('Server ru up?').addAnswer('Yes sr I am :|');
 
 const main = async () => {
 
-  const provider = createProvider(BaileysProvider, {
-    name: 'kurandaMarket'
-  });
+  const provider = createProvider(BaileysProvider);
 
   provider.initHttpServer(3002);
 

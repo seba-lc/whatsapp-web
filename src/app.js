@@ -14,9 +14,7 @@ const provider_baileys_1 = require("@bot-whatsapp/provider-baileys");
 const flowBienvenida = (0, bot_1.addKeyword)('Server ru up?').addAnswer('Yes sr I am :|');
 const main = () => __awaiter(void 0, void 0, void 0, function* () {
     var _a;
-    const provider = (0, bot_1.createProvider)(provider_baileys_1.BaileysProvider, {
-        name: 'kurandaMarket'
-    });
+    const provider = (0, bot_1.createProvider)(provider_baileys_1.BaileysProvider);
     provider.initHttpServer(3002);
     (_a = provider.http) === null || _a === void 0 ? void 0 : _a.server.post('/send-message', (0, provider_baileys_1.handleCtx)((bot, req, res) => __awaiter(void 0, void 0, void 0, function* () {
         const phone = req.body.phone;
