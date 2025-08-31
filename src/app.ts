@@ -10,9 +10,11 @@ const flowServerUp = addKeyword('Server ru up?').addAnswer('Yes sr I am.');
 
 const main = async () => {
 
-  const provider = createProvider(BaileysProvider);
+  const provider = createProvider(BaileysProvider, {
+    name: 'sessionBot_kurandaMarket'
+  });
 
-  provider.initHttpServer(3002);
+  provider.initHttpServer(3010);
 
   provider.http?.server.post('/send-message', handleCtx(async (bot, req, res) => {
     const phone = req.body.phone;
