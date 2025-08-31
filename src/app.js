@@ -11,17 +11,13 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 const bot_1 = require("@bot-whatsapp/bot");
 const provider_baileys_1 = require("@bot-whatsapp/provider-baileys");
-const flowServerUp = (0, bot_1.addKeyword)('Server ru up?').addAnswer('Yes sr I am.');
-// const flowBienvenida = addKeyword(EVENTS.WELCOME)
-//   .addAnswer('Hola! Con qué podemos ayudarte? En la brevedad uno de nuestros administradores se pondrá en contacto contigo :)');
-// const flowCash = addKeyword(['1', 'efectivo']).addAnswer('Perfecto! Te mantendremos informado sobre el estado del pedido :)');
-// const flowCard = addKeyword(['2', 'transferencia']).addAnswer(`Perfecto! Nuestro alias es: kuranda.mp \nTe pedimos el comprobante una vez realizado el pago, y te mantendremos informado sobre el estado del pedido :)`);
+const flowBienvenida = (0, bot_1.addKeyword)('Server ru up?').addAnswer('Yes sr I am :|');
 const main = () => __awaiter(void 0, void 0, void 0, function* () {
     var _a;
     const provider = (0, bot_1.createProvider)(provider_baileys_1.BaileysProvider, {
-        name: 'sessionBot_kurandaMarket'
+        name: 'kurandaMarket'
     });
-    provider.initHttpServer(3010);
+    provider.initHttpServer(3002);
     (_a = provider.http) === null || _a === void 0 ? void 0 : _a.server.post('/send-message', (0, provider_baileys_1.handleCtx)((bot, req, res) => __awaiter(void 0, void 0, void 0, function* () {
         const phone = req.body.phone;
         const message = req.body.message;
@@ -31,11 +27,11 @@ const main = () => __awaiter(void 0, void 0, void 0, function* () {
         });
         res.end('esto es del server de polka');
     })));
-    // await createBot({
-    //   flow: createFlow([flowBienvenida, flowCash, flowCard]),
-    //   database: new MemoryDB(),
-    //   provider
-    // })
+    yield (0, bot_1.createBot)({
+        flow: (0, bot_1.createFlow)([flowBienvenida]),
+        database: new bot_1.MemoryDB(),
+        provider
+    });
 });
 main();
 //https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzltMjZsM3o4d2Y3Y2h6d2g1cGt2Ymxkcm10aHl1dWl2YnJoMWR5dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/dYZuqJLDVsWMLWyIxJ/giphy.mp4
